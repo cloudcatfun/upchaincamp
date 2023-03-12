@@ -19,7 +19,7 @@ contract Counter{
 
 ##### 2、部署合约
 
-![1](F:\BlockChain\HomWork\w_1_2\png\1.png)
+![1](https://github.com/cloudcatfun/upchaincamp/blob/main/w_1_2/png/1.png)
 
 ##### 3、部署者成功调用，其他地址调用失败
 

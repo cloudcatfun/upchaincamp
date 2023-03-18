@@ -1,15 +1,2 @@
-# Sample Hardhat Project
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx install --save hardhat
-npm install @nomicfoundation/hardhat-toolbox
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+#### bank
+![1](https://github.com/cloudcatfun/upchaincamp/blob/main/w_2_1/1679147712562.png)

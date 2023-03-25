@@ -46,5 +46,38 @@ contract Vault {
 }
 
 ```
+- 测试
+```
+
+describe("Vault", function () {
+    async function deployFixture() {
+        const [owner, otherAccount] = await ethers.getSigners();
+        const CCFToken = await ethers.getContractFactory("CCFToken");
+        const ccf = await CCFToken.deploy();
+        const Vault = await ethers.getContractFactory("Vault");
+        const vault = await Vault.deploy();
+        return { ccf, vault,otherAccount };
+    }
+
+    describe("approve", function () {
+        //授权 vault 20000
+        it(" test approve depositToken withdrawToken", async function () {
+            const { ccf, vault, otherAccount } = await loadFixture(deployFixture);
+            //向 otherAccount 转账    
+            await expect(() => ccf.transfer(otherAccount.address, 20000))
+                .to.changeTokenBalance(ccf, otherAccount, 20000);
+            //授权vault
+            expect(await ccf.connect(otherAccount).approve(vault.address, 20000)).not.to.be.reverted;
+            //往vault 存款
+            expect(await vault.connect(otherAccount).depositToken(ccf.address, 20000)).to.changeTokenBalance(ccf, otherAccount, -20000);
+            //向vault 取款
+            //expect(await vault.connect(otherAccount).withdrawToken(ccf.address, 30000)).to.be.revertedWith("Insufficient deposits");
+            expect(await vault.connect(otherAccount).withdrawToken(ccf.address, 10000)).to.changeTokenBalance(ccf, otherAccount, +10000);
+        });
+    });
+  
+});
+
+```
 ![1](https://github.com/cloudcatfun/upchaincamp/blob/main/w_3_1/pngs/test.png)
 

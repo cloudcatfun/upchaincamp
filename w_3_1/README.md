@@ -1,6 +1,6 @@
 ### w_3_1_1 作业
 
-![](F:\BlockChain\HomWork\w_3_1\pngs\w_3_1.png)
+![1](https://github.com/cloudcatfun/upchaincamp/blob/main/w_3_1/pngs/test.png)
 
 -   erc20 合约
 ```
@@ -46,4 +46,5 @@ contract Vault {
 }
 
 ```
-![](F:\BlockChain\HomWork\w_3_1\pngs\pngs/test.png)
+
+![2](https://github.com/cloudcatfun/upchaincamp/blob/main/w_3_1/pngs/w_3_1.png)

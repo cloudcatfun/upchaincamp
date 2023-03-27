@@ -1,0 +1,12 @@
+{
+    "title": "CCF TEST NFT",
+    "description": "CCF test nft ",
+    "image": "ipfs://QmWymyj7mevJNwaU4hvvGGKivw8bGUuKBKsfAAArmxEwzn",
+    "attributes": [
+        {
+            "trait_type": "character",
+            "value": "00001"
+        }
+    ],
+    "version": "1"
+}

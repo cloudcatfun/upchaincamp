@@ -35,7 +35,7 @@ describe("Bank", function () {
     it("withdrawAll", async function () {
         console.log("test  withdrawAll ");
         const { bank, owner, otherAccount } = await loadFixture(deployBankFixture);     
-        await expect(bank.connect(owner).withdraw());
+        await expect(bank.connect(owner).withdrawAll());
     })
 
 
